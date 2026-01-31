@@ -42,9 +42,6 @@ const Login = ({ setUser }) => {
       {/* Background Video */}
       <VideoBG />
 
-      {/* Dark Overlay for better text readability */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/70"></div>
-
       {/* Content Container */}
       <div className="relative z-10 flex flex-col items-center gap-10 px-4 mb-30">
         {/* Typing Animation - with explicit styling */}

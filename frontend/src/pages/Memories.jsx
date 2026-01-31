@@ -5,6 +5,7 @@ const Memories = () => {
     return (
         <div className='min-h-screen flex justify-center items-center'>
             Memories
+            Circular Gallery
         </div>
     )
 }
