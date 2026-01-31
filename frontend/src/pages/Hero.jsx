@@ -2,6 +2,7 @@ import React from "react";
 import VideoBG from "../components/VideoBG";
 import BounceCards from "../components/BounceCards";
 import SplitText from "../components/SplitText";
+import CountUp from "../components/CountUp";
 
 const Hero = () => {
     const images = [
@@ -23,7 +24,7 @@ const Hero = () => {
         <div className="w-screen h-screen overflow-hidden flex items-center justify-center text-center">
             {/* Background */}
             <VideoBG />
-            <div className="col text-white">
+            <div className="col gap-2 text-white z-10">
                 <SplitText
                     text="Hello, you!"
                     className="text-2xl font-semibold text-center"
@@ -37,6 +38,16 @@ const Hero = () => {
                     rootMargin="-100px"
                     textAlign="center"
                     showCallback
+                />
+
+                <CountUp
+                    from={0}
+                    to={23}
+                    separator=","
+                    direction="up"
+                    duration={1}
+                    className="count-up-text text-4xl font-bold"
+                    startCounting={false}
                 />
 
                 {/* Foreground content */}

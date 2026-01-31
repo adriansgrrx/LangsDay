@@ -17,15 +17,7 @@ const Memories = () => {
     return (
         <div className="w-screen h-screen relative">
             <div className="col text-black">
-                {/* <CountUp
-                    from={0}
-                    to={23}
-                    separator=","
-                    direction="up"
-                    duration={1}
-                    className="count-up-text"
-                    startCounting={false}
-                /> */}
+                
                 <div style={{ height: '600px', position: 'relative' }}>
                     <CircularGallery bend={3} textColor="#000000" borderRadius={0.05} scrollEase={0.02}
                     bend={1}
