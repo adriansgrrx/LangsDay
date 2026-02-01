@@ -4,6 +4,7 @@ import axios from 'axios';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import { useEffect } from 'react';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -37,7 +38,14 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Home user={user} setUser={setUser} error={error} />} />
+        <Route 
+          path='/' 
+          element={
+            <ProtectedRoute user={user}>
+              <Home user={user} setUser={setUser} error={error} />
+            </ProtectedRoute>
+          } 
+        />
         <Route path='/login' element={<Login setUser={setUser}/>} />
       </Routes>
     </Router>
