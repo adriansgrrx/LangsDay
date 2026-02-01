@@ -3,6 +3,20 @@
   themes: light --default, wireframe;
 };
 
+@layer base {
+  @font-face {
+    font-family: "Gluck";
+    src: url("/assets/fonts/Gluck Regular.otf") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+#hbd-text {
+  font-family: "Gluck";
 }
