@@ -23,7 +23,7 @@ const Hero = () => {
     ];
     
     return (
-        <div className="min-h-screen overflow-hidden flex items-center justify-center text-center">
+        <div className="min-h-screen flex items-center justify-center text-center mb-0">
             {/* Background */}
             <VideoBG />
             
@@ -33,7 +33,7 @@ const Hero = () => {
             {/* White gradient at bottom */}
             {/* <div className="absolute bottom-0 left-0 right-0 h-20 md:h-30 bg-circular-to-t from-white via-white/60 to-transparent z-5 pointer-events-none" /> */}
             
-            <div className="grid text-white z-10 mb-40">
+            <div className="grid text-white z-10">
                 {/* Main Greeting */}
                 <div id="hbd-text">
                     <SplitText
