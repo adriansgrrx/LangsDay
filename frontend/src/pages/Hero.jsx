@@ -35,22 +35,20 @@ const Hero = () => {
             
             <div className="grid gap-3 text-white z-10 px-4">
                 {/* Main Greeting */}
-                <div id="hbd-text">
-                    <SplitText
-                        text="Happy Birthday, Lang!💛"
-                        className="text-2xl md:text-3xl font-display font-semibold py-2"
-                        delay={50}
-                        duration={2}
-                        ease="power3.out"
-                        splitType="chars"
-                        from={{ opacity: 0, y: 40 }}
-                        to={{ opacity: 1, y: 0 }}
-                        threshold={0.1}
-                        rootMargin="-100px"
-                        textAlign="center"
-                        showCallback
-                    />
-                </div>
+                <SplitText
+                    text="Happy Birthday, Lang!💛"
+                    className="text-3xl font-serif"
+                    delay={50}
+                    duration={2}
+                    ease="power3.out"
+                    splitType="chars"
+                    from={{ opacity: 0, y: 40 }}
+                    to={{ opacity: 1, y: 0 }}
+                    threshold={0.1}
+                    rootMargin="-100px"
+                    textAlign="center"
+                    showCallback
+                />
                 
                 {/* Subheading */}
                 <p id="hbd-text" className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-lg mx-auto text-sm opacity-90">

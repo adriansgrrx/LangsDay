@@ -2,7 +2,6 @@
 @plugin "daisyui" {
   themes: light --default, wireframe;
 };
-
 @layer base {
   @font-face {
     font-family: "Gluck";
@@ -13,10 +12,90 @@
   }
 }
 
+/* Birthday Card Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
-
 #hbd-text {
   font-family: "Gluck";
+}
+
+/* Birthday Card Styles */
+.font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-sans-custom {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.envelope {
+  perspective: 1000px;
+}
+
+.envelope-flap {
+  transform-origin: top;
+  transition: transform 0.6s ease;
+}
+
+.envelope-open .envelope-flap {
+  transform: rotateX(-180deg);
+}
+
+.card-hover {
+  transition: all 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-active .modal-content {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeInBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-active .modal-backdrop {
+  animation: fadeInBg 0.3s ease-out;
+}
+
+.envelope-clickable {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.envelope-clickable:active {
+  transform: scale(0.98);
 }

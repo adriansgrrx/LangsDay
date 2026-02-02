@@ -18,7 +18,7 @@ const Home = ({ user, setUser, error }) => {
       setLoading(false);
       // Trigger fade-in after loading completes
       setTimeout(() => setFadeIn(true), 50);
-    }, 1000); // adjust timing as needed
+    }, 2000); // adjust timing as needed
 
     return () => clearTimeout(timer);
   }, []);
