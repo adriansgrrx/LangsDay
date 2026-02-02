@@ -4,12 +4,12 @@ const Letter = ({ isActive, onClose }) => {
     if (!isActive) return null;
 
     return (
-        <div className="modal-active fixed inset-0 flex items-center justify-center z-50">
+        <div className="modal-active fixed inset-0 flex items-center justify-center z-40 p-5">
             {/* Backdrop */}
             <div className="modal-backdrop fixed inset-0 bg-black/50 bg-opacity-50 backdrop-blur-sm" onClick={onClose}></div>
             
             {/* Modal Content */}
-            <div className="modal-content relative z-10 m-auto w-full max-w-2xl px-4">
+            <div className="modal-content relative z-40 m-auto w-full max-w-2xl">
                 {/* Birthday Card */}
                 <div className="card-hover w-full max-w-2xl mx-auto">
                     <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-neutral-100">
@@ -20,15 +20,14 @@ const Letter = ({ isActive, onClose }) => {
                                 
                                 <div className="h-px flex-1 bg-gradient-to-l from-transparent to-neutral-300"></div>
                             </div>
-                            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-center text-neutral-800 mb-2">Happy Birthday</h2>
-                            <p className="font-sans-custom text-xs sm:text-sm text-center text-neutral-500 tracking-widest uppercase">Wishing you joy</p>
+                            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-center text-neutral-800 mb-2">Happy Birthday,<br />Lang Lang!</h2>
                         </div>
                         
                         {/* Card Body */}
                         <div className="p-6 sm:p-8 lg:p-10 space-y-6 max-h-[50vh] overflow-y-auto">
                             <div className="prose prose-neutral max-w-none">
                                 <p className="font-sans-custom text-sm sm:text-base text-neutral-600 leading-relaxed">
-                                    Dear Friend,
+                                    Dear Lang/Lang-Lang/Clyde/Clyde Vlitz,
                                 </p>
                                 <p className="font-sans-custom text-sm sm:text-base text-neutral-600 leading-relaxed mt-4">
                                     On this special day, may you be surrounded by love, laughter, and everything that brings you happiness. Here's to another year of wonderful memories, new adventures, and dreams coming true.

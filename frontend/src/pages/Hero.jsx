@@ -51,7 +51,7 @@ const Hero = () => {
                 />
                 
                 {/* Subheading */}
-                <p id="hbd-text" className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-lg mx-auto text-sm opacity-90">
+                <p id="hbd-text" className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-lg mx-auto text-xs opacity-90">
                     Today, on your special day, I want to be the first one to greet you happy happy birthday! Happy birthday to my supportive girlfriend, my best friend, and my ally!
                 </p>
                 
