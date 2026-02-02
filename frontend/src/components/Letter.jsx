@@ -20,31 +20,31 @@ const Letter = ({ isActive, onClose }) => {
                                 
                                 <div className="h-px flex-1 bg-gradient-to-l from-transparent to-neutral-300"></div>
                             </div>
-                            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-center text-neutral-800 mb-2">Happy Birthday,<br />Lang Lang!</h2>
+                            <h2 className="font-serif text-3xl lg:text-4xl text-center text-neutral-800 mb-2">Happy Birthday,<br />Lang Lang!</h2>
                         </div>
                         
                         {/* Card Body */}
                         <div className="p-6 sm:p-8 lg:p-10 space-y-6 max-h-[50vh] overflow-y-auto">
-                            <div className="prose prose-neutral max-w-none">
-                                <p className="font-sans-custom text-sm sm:text-base text-neutral-600 leading-relaxed">
+                            <div id="hbd-text" className="prose prose-neutral max-w-none">
+                                <p className="text-sm text-neutral-600 leading-relaxed">
                                     Dear Lang/Lang-Lang/Clyde/Clyde Vlitz,
                                 </p>
-                                <p className="font-sans-custom text-sm sm:text-base text-neutral-600 leading-relaxed mt-4">
-                                    On this special day, may you be surrounded by love, laughter, and everything that brings you happiness. Here's to another year of wonderful memories, new adventures, and dreams coming true.
+                                <p className="text-sm text-neutral-600 leading-relaxed mt-4">
+                                    Here's to another year of wonderful memories, breakthroughs, and dreams coming true. On this special day, what I only want is for you to enjoy, cherish,. 
                                 </p>
-                                <p className="font-sans-custom text-sm sm:text-base text-neutral-600 leading-relaxed mt-4">
+                                <p className="text-sm text-neutral-600 leading-relaxed mt-4">
                                     May your day be filled with moments as beautiful as you are, and may the year ahead bring you endless reasons to smile.
                                 </p>
                             </div>
 
                             
                             {/* Closing */}
-                            <div className="space-y-4">
-                                <p className="font-serif text-xl sm:text-2xl text-neutral-700 italic">
+                            <div id="hbd-text" className='text-end mt-10'>
+                                <p className="text-md text-neutral-700 italic">
                                     With warmest wishes,
                                 </p>
-                                <p className="font-serif text-2xl sm:text-3xl text-neutral-800">
-                                    From Toti
+                                <p className="text-xl text-neutral-700 italic">
+                                    Toti/Adrian
                                 </p>
                             </div>
                         </div>

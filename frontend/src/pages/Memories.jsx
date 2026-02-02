@@ -17,7 +17,7 @@ const Memories = () => {
     return (
         <div className="min-h-screen bg-amber-50 overflow-x-hidden">
             {/* Row 1 — Text */}
-            <div id="hbd-text" className="h-[25vh] flex items-center justify-center mt-10">
+            <div id="hbd-text" className="h-[25vh] flex items-center justify-center mt-20">
                 <div className='grid'>
                     <h1 className="text-2xl font-bold text-center">
                         How We Celebrated
@@ -41,7 +41,7 @@ const Memories = () => {
             </div>
 
             {/* Row 2 — Full-width Gallery */}
-            <div className="relative w-screen h-150">
+            <div className="relative w-screen h-120">
                 <CircularGallery
                 textColor="#000000"
                 bend={1}
