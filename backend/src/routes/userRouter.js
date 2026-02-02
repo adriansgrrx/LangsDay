@@ -36,32 +36,38 @@ const router = express.Router();
 // })
 
 router.post('/login', async (req, res) => {
-    const {email, password} = req.body;
+    const { password } = req.body;
+
     try {
         if (!password) {
-            return res.status(400).json({message: 'Please enter your password '});
+            return res.status(400).json({ message: 'Please enter your password' });
         }
-        
-        const user = await User.findOne({email});
-        
+
+        const email = process.env.INITIAL_LOGIN_EMAIL;
+
+        if (!email) {
+            return res.status(500).json({ message: 'Login email not configured' });
+        }
+
+        const user = await User.findOne({ email });
+
         if (!user || !(await user.matchPassword(password))) {
-            return res.status(401).json({message: 'Invalid credentials'});
-        } 
-        
+            return res.status(401).json({ message: 'Invalid credentials' });
+        }
+
         const token = generateToken(user._id);
-        
+
         res.status(200).json({
             id: user._id,
             email: user.email,
-            token
-        })
-        
+            token,
+        });
     } catch (error) {
-        res.status(500).json({
-            message: "Server error"
-        })
+        console.error(error);
+        res.status(500).json({ message: 'Server error' });
     }
-})
+});
+
 
 router.get('/me', protect, async (req, res) => {
     res.status(200).json(req.user)

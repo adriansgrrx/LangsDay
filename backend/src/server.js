@@ -11,7 +11,6 @@ const app = express();
 
 const PORT = process.env.PORT || 5001
 const __dirname = path.resolve();
-const EMAIL = process.env.VITE_EMAIL
 
 
 if (process.env.NODE_ENV !== "production") {
