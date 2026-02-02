@@ -332,17 +332,17 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `assets/memories/1.png`, text: 'Birthday Eve' },
-      { image: `assets/memories/2.png`, text: '📸' },
-      { image: `assets/memories/3.png`, text: 'Pretty!' },
-      { image: `assets/memories/4.png`, text: 'Fav Flower' },
-      { image: `assets/memories/5.png`, text: 'Stolen' },
-      { image: `assets/memories/6.png`, text: 'Antipolo Church' },
-      { image: `assets/memories/7.png`, text: '🍦' },
-      { image: `assets/memories/8.png`, text: 'City Lights' },
-      { image: `assets/memories/9.png`, text: 'Pretty Snap' },
-      { image: `assets/memories/10.png`, text: 'Another one' },
-      { image: `assets/memories/11.png`, text: 'Our Food 🍕' },
+      { image: "https://langdays.z23.web.core.windows.net/assets/memories/1.png", text: 'Birthday Eve' },
+      { image: "https://langdays.z23.web.core.windows.net/assets/memories/2.png", text: '📸' },
+      { image: "https://langdays.z23.web.core.windows.net/assets/memories/3.png", text: 'Pretty!' },
+      { image: "https://langdays.z23.web.core.windows.net/assets/memories/4.png", text: 'Fav Flower' },
+      { image: "https://langdays.z23.web.core.windows.net/assets/memories/5.png", text: 'Stolen' },
+      { image: "https://langdays.z23.web.core.windows.net/assets/memories/6.png", text: 'Antipolo Church' },
+      { image: "https://langdays.z23.web.core.windows.net/assets/memories/7.png", text: '🍦' },
+      { image: "https://langdays.z23.web.core.windows.net/assets/memories/8.png", text: 'City Lights' },
+      { image: "https://langdays.z23.web.core.windows.net/assets/memories/9.png", text: 'Pretty Snap' },
+      { image: "https://langdays.z23.web.core.windows.net/assets/memories/10.png", text: 'Another one' },
+      { image: "https://langdays.z23.web.core.windows.net/assets/memories/11.png", text: 'Our Food 🍕' },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);
