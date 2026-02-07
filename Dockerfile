@@ -4,7 +4,6 @@ FROM node:20-alpine AS build
 WORKDIR /app
 
 # Copy package files
-COPY package*.json ./
 COPY backend/package*.json ./backend/
 COPY frontend/package*.json ./frontend/
 
@@ -28,8 +27,11 @@ WORKDIR /app
 COPY --from=build /app/backend ./backend
 COPY --from=build /app/frontend/dist ./frontend/dist
 
+# Set NODE_ENV
+ENV NODE_ENV=production
+
 # Expose port 5001
 EXPOSE 5001
 
-# Start the backend server (from /app directory, not /app/backend)
-CMD ["npm", "start"]
+# Start the backend server - FIXED PATH
+CMD ["node", "backend/src/server.js"]
