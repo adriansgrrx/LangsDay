@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/adriansgrrx/LangsDay/issues"
   },
-  "homepage": "https://github.com/adriansgrrx/LangsDay#readme"
+  "homepage": "https://github.com/adriansgrrx/LangsDay#readme",
+  "dependencies": {
+    "react-hot-toast": "^2.6.0"
+  }
 }
