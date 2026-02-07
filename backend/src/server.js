@@ -8,10 +8,8 @@ import path from 'path';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5001;
 const __dirname = path.resolve();
-
-/* ---------- MIDDLEWARE ---------- */
 
 // Dev CORS
 if (process.env.NODE_ENV !== 'production') {
@@ -27,7 +25,6 @@ app.use(express.json());
 
 app.use('/api/users', userRouter);
 
-/* ---------- FRONTEND ---------- */
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../frontend/dist')));
@@ -37,19 +34,8 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-/* ---------- START SERVER FIRST ---------- */
-
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+connectDB().then(() => {
+    app.listen(PORT, () => {
+        console.log("Server started on PORT: ", PORT)
+    });
 });
-
-/* ---------- CONNECT TO DATABASE ---------- */
-
-connectDB()
-  .then(() => {
-    console.log('✅ MongoDB connected');
-  })
-  .catch((err) => {
-    console.error('❌ MongoDB connection failed:', err.message);
-    // Do NOT exit process on Azure — app keeps running
-  });
