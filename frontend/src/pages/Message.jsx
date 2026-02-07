@@ -38,7 +38,7 @@ const Message = () => {
         <div className="min-h-screen flex flex-col from-stone-50 via-neutral-50 to-stone-100 bg-amber-50">
 
         {/* Header */}
-            <div id="hbd-text" className="pt-8 sm:pt-12 mt-15">
+            <div id="hbd-text" className="pt-8 sm:pt-12 mt-5">
                 <div className='grid'>
                     <h1 className="text-2xl font-bold text-center">
                         Message
