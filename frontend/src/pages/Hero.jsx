@@ -103,10 +103,10 @@ const Hero = () => {
                     />
                 </div>
                 
-                {/* Closing Line */}
+                {/* Closing Line
                 <p className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-lg mx-auto mt-8 text-xs opacity-75">
                     I am dedicating this website to be your official and personal birthday time capsule, starting this year. I hope you will like it!
-                </p>
+                </p> */}
             </div>
         </div>
     );
